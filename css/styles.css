@@ -94,10 +94,30 @@ address {
   line-height: 1.5;
 }
 
+/* Base styles for small devices */
 .container {
-  max-width: 1158px;
-  padding: 0 15px;
+  min-width: 320px;
+  max-width: 428px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+/* Tablet screen */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* Desctop screen */
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
 }
 
 /**
@@ -269,22 +289,58 @@ address {
   |============================
 */
 
+/* Base styles for small devices */
 .swifttech {
-  padding: 120px 0 120px;
+  padding: 96px 0 96px;
 }
 
-/* .swifttech-title {
-} */
+  .swifttech-list {
 
-.swifttech-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  }
+
+  .swifttech-item:not(:last-child) {
+    margin-bottom: 72px;
+
 }
 
-.swifttech-item {
+
+/* Tablet screen */
+@media only screen and (min-width: 768px) {
+  .swifttech {
+  }
+
+    .swifttech-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .swifttech-item {
   flex-basis: calc((100% - 3 * 24px) / 4);
 }
+}
+
+/* Desktop screen */
+@media only screen and (min-width: 1158px) {
+  .swifttech {
+    padding: 120px 0 120px;
+  }
+  /* .swifttech-title {
+  } */
+  
+  .swifttech-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .swifttech-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+}
+}
+
+
+
 
 .swifttech-item-container {
   display: flex;
